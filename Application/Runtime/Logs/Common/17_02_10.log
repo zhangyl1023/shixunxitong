@@ -1,0 +1,84 @@
+[ 2017-02-10T09:04:15+08:00 ] 127.0.0.1 /favicon.ico
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+ERR: 无法加载模块:Favicon
+
+[ 2017-02-10T10:43:08+08:00 ] 127.0.0.1 /favicon.ico
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.001000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+ERR: 无法加载模块:Favicon
+
+[ 2017-02-10T22:55:49+08:00 ] 127.0.0.1 /favicon.ico
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.001000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+ERR: 无法加载模块:Favicon
+
+[ 2017-02-10T23:24:59+08:00 ] 127.0.0.1 /favicon.ico
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+ERR: 无法加载模块:Favicon
+
+[ 2017-02-10T23:46:29+08:00 ] 127.0.0.1 /favicon.ico
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+ERR: 无法加载模块:Favicon
+
+[ 2017-02-10T23:52:01+08:00 ] 127.0.0.1 /favicon.ico
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+ERR: 无法加载模块:Favicon
+
+[ 2017-02-10T23:52:33+08:00 ] 127.0.0.1 /stat.htm?id=1260969906&r=&lg=zh-cn&ntime=none&cnzz_eid=103492179-1486737518-&showp=1366x768&t=&h=1&rnd=427268374
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+ERR: 无法加载模块:Stat
+
+[ 2017-02-10T23:52:34+08:00 ] 127.0.0.1 /favicon.ico
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+ERR: 无法加载模块:Favicon
+
+[ 2017-02-10T23:52:54+08:00 ] 127.0.0.1 /stat.htm?id=1260969906&r=&lg=zh-cn&ntime=1486737518&cnzz_eid=103492179-1486737518-&showp=1366x768&t=&h=1&rnd=1347065745
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+ERR: 无法加载模块:Stat
+
+[ 2017-02-10T23:53:15+08:00 ] 127.0.0.1 /stat.htm?id=1260969906&r=&lg=zh-cn&ntime=none&cnzz_eid=562010326-1486737518-&showp=1366x768&t=&h=1&rnd=1856918974
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+ERR: 无法加载模块:Stat
+
+[ 2017-02-10T23:53:33+08:00 ] 127.0.0.1 /favicon.ico
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+ERR: 无法加载模块:Favicon
+
+[ 2017-02-10T23:53:55+08:00 ] 127.0.0.1 /favicon.ico
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+ERR: 无法加载模块:Favicon
+
+[ 2017-02-10T23:56:00+08:00 ] 127.0.0.1 /stat.htm?id=1261185810&r=http%3A%2F%2Fwww.5545.com%2F&lg=zh-cn&ntime=none&cnzz_eid=1752102929-1486741921-http%3A%2F%2Fwww.5545.com%2F&showp=1366x768&t=5545.com&h=1&rnd=1929004343
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+ERR: 无法加载模块:Stat
+
+[ 2017-02-10T23:56:03+08:00 ] 127.0.0.1 /stat.htm?id=1261185834&r=http%3A%2F%2F800.dopa.com.cn%2F%3Fdm%3D5545.com%26acc%3D5D5A62D6-E069-4097-BAAC-2E895820346F%26poprequest%3D1&lg=zh-cn&ntime=none&cnzz_eid=1771257870-1486736981-http%3A%2F%2F800.dopa.com.cn%2F&showp=1366x768&t=dopa.com.cn&h=1&rnd=222638402
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+ERR: 无法加载模块:Stat
+

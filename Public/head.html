@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport"
+          content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no"/>
+    <title>实训管理</title>
+    <script src="/Public/js/jquery-3.1.1.min.js" type="text/javascript" charset="utf-8"></script>
+    <script src="/Public/js/index.js" type="text/javascript" charset="utf-8"></script>
+    <link rel="stylesheet" type="text/css" href="/Public/css/index.css"/>
+</head>
+<body>
+<header>
+    <div id="headMenu" class="headMenu"></div>
+    <div class="logo">
+        <img src="/Public/img/logo.png" alt=""/>
+        <p>
+            实训管理平台
+        </p>
+    </div>
+    <!--<form action="" method="post">-->
+    <!--<input type="text" placeholder="search" value=""/>-->
+    <!--</form>-->
+    <div class="person">
+        <div class="person_pic">
+        </div>
+        <div class="person_right">
+            <p class="person_name">正大光明</p>
+            <marquee scrollamount="3" direction="left">欢迎访问教务管理系统</marquee>
+        </div>
+        <img src="/Public/img/down.png"/>
+    </div>
+    <div class="notice">
+        <img src="/Public/img/notice.png"/>
+        <span class="notice_num">11</span>
+    </div>
+</header>
+<div class="sidebar" id="sliderbar">
+    <ul class="ce">
+        <!--<li>-->
+            <!--<a class="first_slide" id="first_slide_tools" href="#">基础设置 </a>-->
+            <!--<ul class="er">-->
+                <!--<li><a href="<?php echo U('Teacher/showTeacher')?>">教师名单</a></li>-->
+                <!--<li><a href="<?php echo U('Profession/showProfession');?>">专业设置</a></li>-->
+                <!--<li><a href="<?php echo U('Class/showClass');?>">专业班级</a></li>-->
+                <!--<li><a href="<?php echo U('Semester/showSemester',array('suiji'=>rand().time())); ?>">学期设置</a></li>-->
+                <!--<li><a href="<?php echo U('ProfessionPlan/showProfessionPlan');?>">专业教学计划</a></li>-->
+                <!--<li><a href="<?php echo U('SemesterPlan/showsemesterPlan');?>">学期教学计划</a></li>-->
+                <!--<li><a href="<?php echo U('Sourse/showSourse');?>">课程设置</a></li>-->
+                <!--<li><a href="<?php echo U('Privilege/showPrivilege');?>">权限设置</a></li>-->
+                <!--<li><a href="<?php echo U('Role/showRole');?>">角色设置</a></li>-->
+                <!--<li><a href="<?php echo U('Admin/showAdmin');?>">管理员列表</a></li>-->
+            <!--</ul>-->
+        <!--</li>-->
+        <!--<li>-->
+            <!--<a class="first_slide" id="first_slide_space" href="#">耗材及工量具申报</a>-->
+            <!--<ul class="er">-->
+                <!--<li><a href="<?php echo U('Consumable/showConsumable');?>">课程耗材清单填报</a></li>-->
+                <!--<li><a href="<?php echo U('Returnres/showReturnres');?>">申请材料入库</a></li>-->
+                <!--<li><a href="<?php echo U('SourseItem/showSourseItem');?>">实训课程项目填报</a></li>-->
+                <!--<li><a href="<?php echo U('FirstCheck/showFirstCheck');?>">教务处审核</a></li>-->
+            <!--</ul>-->
+        <!--</li>-->
+        <!--<li><a class="first_slide" id="first_slide_test" href="#">场地租用</a></li>-->
+        <!--<li><a class="first_slide" id="first_slide_test" href="#">考试管理</a></li>-->
+        <!--<li><a class="first_slide" id="first_slide_test" href="#">课程管理</a>-->
+            <!--<ul class="er">-->
+                <!--<li><a href="<?php echo U('Consumable/showconsumable');?>">课程列表</a></li>-->
+            <!--</ul>-->
+        <!--</li>-->
+        <?php foreach($menu as $v){ ?>
+        <li>
+            <a class="first_slide" id="first_slide_tools" href="#"><?php echo $v['priv_name'];?></a>
+            <ul class="er">
+                <?php foreach($v['child'] as $vv){ ?>
+                <li>
+                    <a href="<?php echo '/'.$vv['module_name'].'/'.$vv['controller_name'].'/'.$vv['action_name']?>"><?php echo $vv['priv_name'];?></a>
+                </li>
+                <?php }?>
+            </ul>
+        </li>
+        <?php }?>
+        <div class="clear"></div>
+    </ul>
+</div>

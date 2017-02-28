@@ -1,0 +1,533 @@
+*{
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	font-family:SimHei ;
+}
+.clear{
+	clear: both;
+}
+img{
+	border: none;
+}
+body{
+	min-width: 860px;
+	overflow: hidden;
+	position: relative;
+	border: 1px solid white;
+	overflow-y: scroll;
+}
+/*滚动条样式*/
+scrollbar{
+	-moz-appearance: none !important;
+	background-color: #F5F5F5 !important;/* 滚动条背景透明 */
+	background-image: none !important; /* 滚动条背景图案不显示 */
+	position: relative !important; /* 更改滚动条的定位方式为相对 */
+	overflow: hidden !important;
+	z-index: 999999999 !important; /* 把滚动条提到Z轴最上层 */
+}
+body::-webkit-scrollbar{
+	width: 10px;
+	background-color: #F5F5F5;
+}
+body::-webkit-scrollbar-thumb{
+	background-color: #0ae;
+	background-image: -webkit-gradient(linear, 0 0, 0 100%,
+	                   color-stop(.5, rgba(255, 255, 255, .2)),
+					   color-stop(.5, transparent), to(transparent));
+}
+body::-webkit-scrollbar-track{
+	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+	background-color: #F5F5F5;
+}
+/*头部样式*/
+header{
+	min-width: 860px;
+	position: fixed;
+	z-index: 3;
+	top: 0;
+	width: 100%;
+	height: 76px;
+	background: white;
+	box-shadow: 0 1px 5px black;
+	border-bottom: 1px solid black;
+}
+header .headMenu{
+	float: left;
+	width: 76px;
+	height: 76px;
+	background: url(../img/headmenu.png) no-repeat;
+	background-size: 100% 100%;
+	border: none;
+	cursor: pointer;
+	transition: 1s;
+}
+header .logo{
+	width: 200px;
+	box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	float: left;
+	height: 100%;
+	line-height: 76px;
+	font-size: 20px;
+	background: #6064c1;
+	cursor: pointer;
+}
+header .logo img{
+	float: left;
+	margin-top: 8%;
+	margin-left: 10px;
+	height: 40px;
+}
+header .logo p{
+	width: 130px;
+	float: left;
+	margin-left: 8px;
+	text-align: center;
+	box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	color: white;
+	line-height: 76px;
+}
+
+header form{
+	float: left;
+	height: 100%;
+	position: relative;
+	margin-left: 40px;
+}
+header form input{
+	width: 170px;
+	position: absolute;
+	top: 50%;
+	transform: translateY(-50%);
+	-moz-transform: translateY(-50%);
+	-ms-transform: translateY(-50%);
+	-webkit-transform:translateY(-50%);
+}
+header .notice{
+	float: right;
+	width: 80px;
+	height: 100%;
+	border-left: 1px solid rgb(224,224,224);
+	box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	cursor: pointer;
+	position: relative;
+}
+header .notice img{
+	position: absolute;
+	width: 17px;
+	height: 18px;
+	top: 50%;
+	left: 50%;
+	transform: translateX(-50%) translateY(-50%);
+	-moz-transform: translateX(-50%) translateY(-50%);
+	-ms-transform: translateX(-50%) translateY(-50%);
+	-webkit-transform: translateX(-50%) translateY(-50%);
+}
+header .notice .notice_num{
+	background: rgb(216,27,96);
+	position: absolute;
+	font-weight: bolder;
+	top: 11px;
+	left: 45px;
+	text-align: center;
+	line-height: 18px;
+	color: white;
+	width: 18px;
+	height: 18px;
+	border-radius: 50%;
+	font-size:11px;
+	white-space: nowrap;
+}
+header .person{
+	float: right;
+	position: relative;
+	padding: 13px;
+	width: 180px;
+	height: 100%;
+	border-left: 1px solid rgb(224,224,224);
+	box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	cursor: pointer;
+}
+header .person .person_pic{
+	width: 50px;
+	height: 50px;
+	border-radius: 50%;
+	background: greenyellow;
+	overflow: hidden;
+	float: left;
+}
+header .person .person_pic img{
+	width: 100%;
+	height: 100%;
+	border: none;
+}
+header .person .person_right{
+	float: left;
+	width: 100px;
+	height: 100%;
+}
+header .person .person_right p{
+	text-align: center;
+	padding-top: 7px ;
+	margin-bottom: 10px;
+}
+header .person .person_right marquee{
+	font-size: 14px;
+}
+header .person img:last-child{
+	position: absolute;
+	top: 28px;
+	left: 152px ;
+}
+/*侧边栏样式*/
+.sidebar{
+	float: left;
+	width: 276px;
+	height: 100%;
+	transition: 0.6s;	
+	position: fixed;
+	z-index: 2;
+	top: 0;
+	background: #4e52bb;
+}
+@media only screen and (min-width: 900px) and (max-width: 1200px) {
+	.sidebar{
+		width: 200px;
+	}
+}
+@media only screen and (max-width: 900px) {
+	.sidebar{
+		width: 150px;
+	}
+}
+a{text-decoration:none;outline:none;}
+.ce a:hover{
+	color: rgb(242,179,63);
+	transition: 0.4s;
+}
+.ce{display:block;width:100%;position:absolute;z-index:5;top:86px;left:0px;}
+.ce li .first_slide{
+	padding: 10px 10px 10px 40px;color:white;display:block;cursor:pointer;
+	font-size: 15px;
+	-webkit-transition: 0.4s;
+	-moz-transition: 0.4s;
+	-ms-transition: 0.4s;
+	-o-transition: 0.4s;
+	transition: 0.4s;
+}
+.ce li #first_slide_space{
+	background: url(../img/space_w.png) no-repeat;
+	background-position: 5% 47% ;
+	background-size: auto 45%;
+}
+.ce li #first_slide_space:hover{
+	color: rgb(242,179,63);
+	background: url(../img/space_o.png) no-repeat;
+	background-position: 5% 47% ;
+	background-size: auto 50%;
+}
+.ce li #first_slide_tools{
+	background: url(../img/tools_w.png) no-repeat;
+	background-position: 5% 47% ;
+	background-size: auto 45%;
+}
+.ce li #first_slide_tools:hover{
+	color: rgb(242,179,63);
+	background: url(../img/tools_o.png) no-repeat;
+	background-position: 5% 47% ;
+	background-size: auto 50%;
+}
+.ce li #first_slide_test{
+	background: url(../img/test_w.png) no-repeat;
+	background-position: 5% 47% ;
+	background-size: auto 45%;
+}
+
+.ce li #first_slide_test:hover{
+	color: rgb(242,179,63);
+	background: url(../img/test_o.png) no-repeat;
+	background-position: 5% 47% ;
+	background-size: auto 50%;
+}
+.ce li .dqian{background:none}
+
+.er{display:none;width:100%;}
+.er li{width:100%;border:solid rgb(140,140,140);border-width:1px 0px 0px;}
+.er li a{display:block;padding:6px 6px 6px 50px;color:white;background:none;font-size: 13px;}
+
+
+
+/*主体样式*/
+.content{
+	width: 100%;
+	height: 1080px;
+	position: absolute;
+	background: rgb(241,241,241);
+	border: 1px solid white ;
+	box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+}
+.content .content_head{
+	height: 88px;
+}
+.content section{
+	transition: 0.5s;
+	margin-left: 286px;
+	padding: 10px;
+	box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+}
+@media only screen and (min-width: 900px) and (max-width: 1200px) {
+	.content section{
+		margin-left: 210px;
+	}
+}
+@media only screen and (max-width: 900px) {
+	.content section{
+		margin-left: 160px;
+	}
+}
+.content section .box{
+	width: 99%;
+	height: 100%;
+}
+.box .div_table{
+	float: left;
+	width: 100%;
+	border-radius: 16px;
+	background: white;
+	box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	border: 1px solid rgb(241,241,241);
+	box-shadow: 0 1px 14px rgb(241,241,241);
+	-webkit-box-shadow: 0 1px 14px rgb(35,13,13);;
+	padding: 20px 20px;
+	margin-bottom: 100px;
+}
+
+
+/*主体部分教学计划表格样式*/
+.box .table{ 
+	box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	font-size:12px;
+	table-layout:fixed; 
+	empty-cells:show; 
+	border-collapse: collapse; 
+	margin:0 auto; 
+	font-weight: 300;
+}
+.box .table td,.table th{ 
+	border:1px solid #cad9ea; 
+	text-align: center;
+	height:30px; 
+}
+.box .table .tableName{
+	text-align: left;
+	border: none;
+	padding: 20px 0 10px 30px;
+	font-size: 16px;
+	color: rgb(233,78,2);
+	font-weight: 500;
+}
+.box .table .tableNew{
+	text-align: right;
+	border: none;
+	padding: 20px 20px 10px 0;
+}
+.box .teachPlan .tableNew img{
+	width: 60px;
+	cursor: pointer;
+	box-shadow: 0 0 5px rgb(4,155,252);
+	transition: 0.5s;
+	-moz-transition: 0.5s;
+	-ms-transition: 0.5s;
+	-webkit-transition: 0.5s;
+}
+.box .teachPlan .tableNew img:hover{
+	box-shadow: 0 0 15px rgb(4,155,252);
+}
+.box .teachPlan td div{
+	width: 100%;
+	max-height: 40px;
+	overflow: hidden;
+	text-overflow:ellipsis;
+	background: none;
+	box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	padding: 0 10px 0 0;
+}
+.box .table th{ 
+	height:30px; 
+	width: 12.5%;
+	background-color:#f5fafe; 
+} 
+
+.box .teachPlan .teachPlan_1{
+	width: 11.5%;
+}
+.box .teachPlan .teachPlan_2{
+	width: 28.5%;
+}
+.box .teachPlan .teachPlan_3{
+	width: 9.5%;
+}
+.box .teachPlan .teachPlan_4{
+	width: 9.5%;
+}
+.box .teachPlan .teachPlan_5{
+	width: 14.5%;
+}
+.box .teachPlan .teachPlan_6{
+	width: 2.5%;
+}
+.box .teachPlan .teachPlan_7{
+	width: 11.5%;
+}
+.box .teachPlan .teachPlan_8{
+	width: 12.5%;
+}
+.box .teachPlan .teachPlan_8 span{
+	float: left;
+	width: 40%;
+	line-height: 20px;
+	height: 20px;
+	margin:0 5%;
+	color: white;
+	font-size: 10px;
+	text-align: center;
+	border-radius: 6px;
+	-moz-border-radius: 6px;
+	-webkit-border-radius: 6px;
+	cursor: pointer;
+	transition: 0.5s;
+	-moz-transition: 0.5s;
+	-ms-transition: 0.5s;
+	-webkit-transition: 0.5s;
+}
+.box .teachPlan .teachPlan_8 .teachPlan_ope{
+	background: rgba(19, 192, 238, 0.98);
+	box-shadow: 0 0 3px  rgb(39,153,60);
+}
+.box .teachPlan .teachPlan_8 .teachPlan_ope:hover{
+	background: rgba(27, 106, 237, 0.87);
+	box-shadow: 0 0 3px  rgb(19,133,40);
+}
+.box .teachPlan .teachPlan_8 .teachPlan_del{
+	background: rgba(255, 0, 0, 0.42);
+	box-shadow: 0 0 3px  rgb(215,82,83);
+}
+.box .teachPlan .teachPlan_8 .teachPlan_del:hover{
+	background: rgb(222, 63, 52);
+	box-shadow: 0 0 3px  rgb(195,62,63);	
+}
+
+
+/*主体部分新建教学计划表格样式*/
+.box .teachAdd{
+	font-size: 16px;
+}
+.box .teachAdd .teachAdd_left{
+	/*width: 100px;*/
+	border:1px solid rgba(0, 255, 223, 0.14);
+}
+.box .teachAdd .teachAdd_right{
+	width:800px;
+	padding: 5px 0;
+	height: 25px;
+	border: 1px solid rgba(13, 255, 139, 0.16);
+	box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+}
+.box .teachAdd .teachAdd_right input{
+	float: left;
+	width: 90%;
+	height: 120%;
+	border: none;
+	outline: none;
+	border-bottom: 1px solid rgb(111, 41, 84);
+	font-size: 15px;
+	padding-left: 10px;
+	box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+}
+.box .teachAdd .teachAdd_right4{
+	border: none;
+	box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+}
+.box .teachAdd .teachAdd_right4 select{
+	float: left;
+	width:50%;
+	padding-left: 10px;
+	height: 100%;
+}
+.box .teachAdd .teachAdd_right textarea{
+	width: 100%;
+	font-size: 14px;
+	text-indent: 28px;
+}
+.box .teachAdd .teachAdd_left5{
+	padding: 20px 0 0 0;
+	vertical-align: top;
+}
+.box .div_tableAdd{
+	position: relative;
+	padding-bottom: 50px;
+}
+.box .div_tableAdd span{
+	position: absolute;
+	bottom: 5%;
+	width: 10%;
+	height: 24px;
+	line-height: 24px;
+	color: white;
+	border-radius: 5px;
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+	background: red;
+	text-align: center;
+	cursor: pointer;
+	transition: 0.3s;
+	-moz-transition: 0.3s;
+	-ms-transition: 0.3s;
+	-webkit-transition: 0.3s;
+}
+.box .div_tableAdd .table_clear{
+	left: 35%;
+	background:rgb(193,221,163) ;
+	box-shadow: 0 0 5px rgb(29, 143, 25);
+	-webkit-box-shadow: 0 0 5px rgb(9, 139, 30);
+}
+.box .div_tableAdd .table_clear:hover{
+	background:rgb(173,201,143) ;
+	box-shadow: 0 0 5px rgb(173,201,143) ;
+	-webkit-box-shadow: 0 0 5px rgb(173,201,143) ;
+}
+.box .div_tableAdd .table_submit{
+	right: 35%;
+	background:rgb(158,193,225); 
+	box-shadow: 0 0 5px rgb(120, 147, 172);
+	-webkit-box-shadow:0 0 5px rgb(105, 125, 147);
+}
+.box .div_tableAdd .table_submit:hover{
+	background:rgb(138,173,205); 
+	box-shadow: 0 0 5px rgb(138,173,205);
+	-webkit-box-shadow:0 0 5px rgb(138,173,205);
+}

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<form action="__ACTION__" enctype="multipart/form-data"  method="post" name="theForm">
+    <table class="profession_top" border="1" style="border-collapse:collapse;">
+        <div>
+            <?php foreach($data as $v){?>
+            <tr>
+                <td>专业</td>
+                <td><input type="text" name="profession" value="<?php echo $v['profession'];?>"></td>
+            </tr>
+            <?php }?>
+        </div>
+        <span>
+           <!--<input type="hidden" name="goods_id" value="0"/>-->
+            <input type="submit" value=" 确定 " class="button"/>
+            <input type="hidden" name="id" value="<?php echo $v['id'];?>"/>
+            <input type="reset" value=" 重置 " class="button"/>
+
+        </span>
+    </table>
+</form>
+</body>
+</html>

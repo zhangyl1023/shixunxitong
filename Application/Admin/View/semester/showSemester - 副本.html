@@ -1,0 +1,84 @@
+<?php include_once '/Public/head.html'; ?>
+<div class="content">
+    <div class="content_head"></div>
+    <!--<div class="content_slide"></div>-->
+    <section id="content_slide">
+        <div class="box">
+            <div class="div_table">
+                <table width="60%" class="table teachPlan">
+                    <tr>
+                        <td class="tableName" colspan="1">专业设置</td>
+                        <td class="tableNew" colspan="1"><img src="/Public/img/新建.png"/></td>
+                    </tr>
+                    <tr>
+                        <th class="teachPlan_1">学期</th>
+                        <th class="teachPlan_2">操作</th>
+                    </tr>
+                    <?php foreach($data as $v){ ?>
+                    <tr class="hg">
+                        <td class="teachPlan_1"><?php echo $v['semester']?></td>
+                        <td class="teachPlan_8">
+                            <span class="teachPlan_ope" onclick="edit_table(this,<?php echo $v['id']?>,'semester')">
+                                编辑</span>
+                            <span class="teachPlan_del" onclick="del_table(this,<?php echo $v['id']?>">删除</span>
+                            <!--<a href="<?php echo U('Semester/delSemester',array('id'=>$v['id'])) ?>">删除</a>-->
+                        </td>
+                    </tr>
+                    <?php } ?>
+                </table>
+            </div>
+        </div>
+
+</div>
+</section>
+</div>
+<div class="clear"></div>
+
+</body>
+<script>
+//    $(function(){
+//        $('.teachPlan_ope').bind('click',function(){
+//            var inputObj='<input type="text" name="semester" value="$this.html" />';
+//        });
+//    });
+function edit_table(o,id,field){
+    //获取当前单元格
+    var tdObj = $(o).parent().parent().children(':first');
+    //如果td里面有input框在，则就return false;
+    if(tdObj.find('input').length>0){
+        return false;
+    }
+    //获取单元格里面的内容，
+    var tdText = tdObj.html();
+    //清空单元格 里面的内容，以便存储input框
+    tdObj.html('');
+    //创建一个input框， 添加到td里面
+    var inputObj = $("<input type='text' name='demo'/>");
+    //给input框架，设置样式
+    inputObj.css('font-size','18px').css('border-width',0);
+    inputObj.val(tdText);
+    //把创建的input框，添加到td里面，
+    inputObj.appendTo(tdObj);
+    $("input[name=demo]").focus();
+    //给input添加失去焦点事件，发送ajax请求
+    inputObj.blur(function(){
+        //获取输入的值
+        var valueObj = $('input[name=demo]').val();
+        //执行ajax的请求
+        $.ajax({
+            type:'get',
+            data:{id:id,field:field,values:valueObj},
+            url:'<?php echo U("edit_table")?>',
+            success:function(msg){
+                //msg返回值是修改数据库的结果
+                if(msg>0){
+                    tdObj.html(valueObj);
+                    tdObj.css('font-size','14px');
+                }
+            }
+
+        });
+    });
+}
+</script>
+</html>
