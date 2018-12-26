@@ -1,4 +1,4 @@
-﻿--1
+﻿--12
 #创建一个管理员表
 create table sx_admin(
 	id int unsigned primary key auto_increment,
